@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 960px;
+    max-width: 960px;
     margin: 25px auto;
 }
 
@@ -54,8 +54,22 @@ input[type="radio"] {
     margin-left: 10px;
 }
 
-.ellipse:hover {
+/* .ellipse:hover {
     background-color: #fff;
+} */
+
+.pagination label:hover:after {
+    opacity: 1;
+}
+
+.pagination label:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 #button_1:checked ~ .first {
