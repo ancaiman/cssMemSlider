@@ -28,6 +28,7 @@ body {
 .slide-item img {
     display: block;
     width: 100%;
+    border-radius: 10px;
 }
 
 .slide-item p {
@@ -46,6 +47,7 @@ input[type="radio"] {
 }
 
 .ellipse {
+    position: relative;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -54,36 +56,47 @@ input[type="radio"] {
     margin-left: 10px;
 }
 
-/* .ellipse:hover {
-    background-color: #fff;
-} */
-
-.pagination label:hover:after {
-    opacity: 1;
+.ellipse:hover:after {
+    opacity: 0;
 }
 
-.pagination label:after {
+.ellipse:after {
     content: '';
-    width: 6px;
-    height: 6px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #000;
     cursor: pointer;
-    margin-left: 10px;
+    top: 2px;
+    left: 2px;
+    opacity: 0;
 }
 
-#button_1:checked ~ .first {
+.ellipse:hover {
+    background-color: #fff;
+}
+
+#button_1:checked ~ .pagination .dot_1:after,
+#button_2:checked ~ .pagination .dot_2:after,
+#button_3:checked ~ .pagination .dot_3:after,
+#button_4:checked ~ .pagination .dot_4:after,
+#button_5:checked ~ .pagination .dot_5:after {
+    opacity: 1;
+}
+
+#button_1:checked ~ .slides .first {
     margin-left: 0;
 }
 
-#button_2:checked ~ .first {
+#button_2:checked ~ .slides .first {
     margin-left: -25%;
 }
 
-#button_3:checked ~ .first {
+#button_3:checked ~ .slides .first {
     margin-left: -50%;
 }
 
-#button_4:checked ~ .first {
+#button_4:checked ~ .slides .first {
     margin-left: -75%;
 }
