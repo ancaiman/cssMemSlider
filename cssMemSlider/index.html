@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cssMemSlider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="slide-btn" id="button_1" checked>
+            <input type="radio" name="slide-btn" id="button_2">
+            <input type="radio" name="slide-btn" id="button_3">
+            <input type="radio" name="slide-btn" id="button_4">
+            <div class="slide-item first">
+                <img src="./assets/img/slide_1.jpg" alt="slide_1">
+                <p>Slide 1</p>
+            </div>
+            <div class="slide-item">
+                <img src="./assets/img/slide_2.jpg" alt="slide_2">
+                <p>Slide 2</p>
+            </div>
+            <div class="slide-item">
+                <img src="./assets/img/slide_3.jpg" alt="slide_3">
+                <p>Slide 3</p>
+            </div>
+            <div class="slide-item">
+                <img src="./assets/img/slide_4.jpg" alt="slide_4">
+                <p>Slide 4</p>
+            </div>
+        </div>
+        <div class="pagination">
+            <label for="button_1" class="ellipse"></label>
+            <label for="button_2" class="ellipse"></label>
+            <label for="button_3" class="ellipse"></label>
+            <label for="button_4" class="ellipse"></label>
+        </div>
+    </div>
 </body>
 </html>
