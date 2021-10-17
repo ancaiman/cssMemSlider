@@ -5,6 +5,7 @@
 
 body {
     background: #25282a;
+    margin: 0px 25px 0px 25px;
 }
 
 .slider {
@@ -29,11 +30,11 @@ body {
     display: block;
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 25px;
 }
 
 .slide-item p {
     color: #fff;
-    margin-top: 25px;
 }
 
 input[type="radio"] {
@@ -44,6 +45,8 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: relative;
+    bottom: 16px;
 }
 
 .ellipse {
@@ -54,6 +57,10 @@ input[type="radio"] {
     background-color: #71abff;
     cursor: pointer;
     margin-left: 10px;
+}
+
+.ellipse:nth-of-type(1) {
+    margin-left: 0px;
 }
 
 .ellipse:hover:after {
@@ -99,4 +106,16 @@ input[type="radio"] {
 
 #button_4:checked ~ .slides .first {
     margin-left: -75%;
+}
+
+@media (max-width: 500px) {
+    .pagination {
+        justify-content: center;
+        bottom: 0px;
+    }
+
+    .slide-item p {
+        text-align: center;
+        margin-bottom: 25px;
+    }
 }
